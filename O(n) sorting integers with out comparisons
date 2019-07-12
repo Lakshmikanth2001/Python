@@ -1,0 +1,21 @@
+#only applicable for list or array of integers with non dublicate elements and 
+#and string with non dublicate elements
+a=list()
+n=int(input('select the lenght of the list'))
+for i in range(n):
+    x=int(input('input an element ot the list'))
+    a.insert(i,x)
+b=list()
+for i in range(max(a)+2):
+    b.insert(i,0)
+for i in range(max(a)+2):
+  b[a[i]]=a[i]
+c=list()
+k=0
+for i in range(max(a)+2):
+    if b[i]!=0:
+        c[k]=b[i]
+        k+=1
+print(c)
+b.clear()        
+  
